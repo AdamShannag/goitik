@@ -1,0 +1,521 @@
+{
+  "allow_rules": {
+    "rule1": {
+      "paths": [
+        "test.path"
+      ],
+      "roles": {
+        "all": {
+          "Group1": {
+            "startsWith": [
+              "role-"
+            ],
+            "endsWith": [
+              "1"
+            ]
+          },
+          "Group2": {
+            "equals": [
+              "role-2",
+              "role-1"
+            ]
+          }
+        },
+        "any": {
+          "Group1": {
+            "equals": [
+              "role-4",
+              "role-2"
+            ]
+          },
+          "Group2": {
+            "contains": [
+              "role"
+            ]
+          }
+        }
+      },
+      "headers": {
+        "all": {
+          "roles": {
+            "equals": [
+              "role-2",
+              "role-1"
+            ]
+          }
+        },
+        "any": {
+          "roles": {
+            "equals": [
+              "role-2",
+              "role-1"
+            ]
+          }
+        }
+      }
+    },
+    "rule2": {
+      "paths": [
+        "test.path.2"
+      ],
+      "roles": {
+        "any": {
+          "Group1": {
+            "equals": [
+              "role-1",
+              "role-2"
+            ]
+          },
+          "Group2": {
+            "equals": [
+              "role-4",
+              "role-5"
+            ]
+          }
+        }
+      }
+    },
+    "rule3": {
+      "paths": [
+        "test.path"
+      ],
+      "roles": {
+        "all": {
+          "Group1": {
+            "equals": [
+              "role-1",
+              "role-2"
+            ]
+          },
+          "Group2": {
+            "equals": [
+              "role-2",
+              "role-1"
+            ]
+          }
+        },
+        "any": {
+          "Group1": {
+            "equals": [
+              "role-4",
+              "role-2"
+            ]
+          },
+          "Group2": {
+            "equals": [
+              "role-1",
+              "role-2"
+            ]
+          }
+        }
+      },
+      "headers": {
+        "all": {
+          "roles": {
+            "equals": [
+              "role-2",
+              "role-1"
+            ]
+          }
+        },
+        "any": {
+          "roles": {
+            "equals": [
+              "role-2",
+              "role-1"
+            ]
+          }
+        }
+      }
+    },
+    "rule4": {
+      "paths": [
+        "test.path.3"
+      ],
+      "roles": {
+        "any": {
+          "Group1": {
+            "equals": [
+              "role-1",
+              "role-2"
+            ]
+          },
+          "Group2": {
+            "equals": [
+              "role-4",
+              "role-5"
+            ]
+          }
+        }
+      }
+    },
+    "rule5": {
+      "paths": [
+        "test.path.5"
+      ],
+      "roles": {
+        "all": {
+          "Group1": {
+            "equals": [
+              "role-1",
+              "role-2"
+            ]
+          },
+          "Group2": {
+            "equals": [
+              "role-2",
+              "role-1"
+            ]
+          }
+        },
+        "any": {
+          "Group1": {
+            "equals": [
+              "role-4",
+              "role-2"
+            ]
+          },
+          "Group2": {
+            "equals": [
+              "role-1",
+              "role-2"
+            ]
+          }
+        }
+      },
+      "headers": {
+        "all": {
+          "roles": {
+            "equals": [
+              "role-2",
+              "role-1"
+            ]
+          }
+        },
+        "any": {
+          "roles": {
+            "equals": [
+              "role-2",
+              "role-1"
+            ]
+          }
+        }
+      }
+    },
+    "rule6": {
+      "paths": [
+        "test.path.7"
+      ],
+      "roles": {
+        "any": {
+          "Group1": {
+            "equals": [
+              "role-1",
+              "role-2"
+            ]
+          },
+          "Group2": {
+            "equals": [
+              "role-4",
+              "role-5"
+            ]
+          }
+        }
+      }
+    },
+    "rule7": {
+      "paths": [
+        "test.path.8"
+      ],
+      "roles": {
+        "all": {
+          "Group1": {
+            "equals": [
+              "role-1",
+              "role-2"
+            ]
+          },
+          "Group2": {
+            "equals": [
+              "role-2",
+              "role-1"
+            ]
+          }
+        },
+        "any": {
+          "Group1": {
+            "equals": [
+              "role-4",
+              "role-2"
+            ]
+          },
+          "Group2": {
+            "equals": [
+              "role-1",
+              "role-2"
+            ]
+          }
+        }
+      },
+      "headers": {
+        "all": {
+          "roles": {
+            "equals": [
+              "role-2",
+              "role-1"
+            ]
+          }
+        },
+        "any": {
+          "roles": {
+            "equals": [
+              "role-2",
+              "role-1"
+            ]
+          }
+        }
+      }
+    },
+    "rule8": {
+      "paths": [
+        "test.path.8",
+        "test.path"
+      ],
+      "roles": {
+        "any": {
+          "Group1": {
+            "equals": [
+              "role-1",
+              "role-2"
+            ]
+          },
+          "Group2": {
+            "equals": [
+              "role-4",
+              "role-5"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "deny_rules": {
+    "rule1": {
+      "paths": [
+        "test.path"
+      ],
+      "roles": {
+        "all": {
+          "Group1": {
+            "equals": [
+              "role-1",
+              "role-4"
+            ]
+          },
+          "Group2": {
+            "equals": [
+              "role-2",
+              "role-4"
+            ]
+          },
+          "Group3": {
+            "equals": [
+              "role-5",
+              "role-4"
+            ]
+          }
+        }
+      }
+    },
+    "rule2": {
+      "paths": [
+        "test.path.2"
+      ],
+      "roles": {
+        "any": {
+          "Group1": {
+            "equals": [
+              "role-1",
+              "role-6"
+            ]
+          },
+          "Group2": {
+            "equals": [
+              "role-4",
+              "role-5"
+            ]
+          },
+          "Group3": {
+            "equals": [
+              "role-9",
+              "role-3"
+            ]
+          }
+        }
+      }
+    },
+    "rule3": {
+      "paths": [
+        "test.path.4"
+      ],
+      "roles": {
+        "all": {
+          "Group1": {
+            "equals": [
+              "role-1",
+              "role-4"
+            ]
+          },
+          "Group2": {
+            "equals": [
+              "role-2",
+              "role-4"
+            ]
+          },
+          "Group3": {
+            "equals": [
+              "role-5",
+              "role-4"
+            ]
+          }
+        }
+      }
+    },
+    "rule4": {
+      "paths": [
+        "test.path.3"
+      ],
+      "roles": {
+        "any": {
+          "Group1": {
+            "equals": [
+              "role-1",
+              "role-6"
+            ]
+          },
+          "Group2": {
+            "equals": [
+              "role-4",
+              "role-5"
+            ]
+          },
+          "Group3": {
+            "equals": [
+              "role-9",
+              "role-3"
+            ]
+          }
+        }
+      }
+    },
+    "rule5": {
+      "paths": [
+        "test.path.6"
+      ],
+      "roles": {
+        "all": {
+          "Group1": {
+            "equals": [
+              "role-1",
+              "role-4"
+            ]
+          },
+          "Group2": {
+            "equals": [
+              "role-2",
+              "role-4"
+            ]
+          },
+          "Group3": {
+            "equals": [
+              "role-5",
+              "role-4"
+            ]
+          }
+        }
+      }
+    },
+    "rule6": {
+      "paths": [
+        "test.path.8"
+      ],
+      "roles": {
+        "any": {
+          "Group1": {
+            "equals": [
+              "role-1",
+              "role-6"
+            ]
+          },
+          "Group2": {
+            "equals": [
+              "role-4",
+              "role-5"
+            ]
+          },
+          "Group3": {
+            "equals": [
+              "role-9",
+              "role-3"
+            ]
+          }
+        }
+      }
+    },
+    "rule7": {
+      "paths": [
+        "test.path.7"
+      ],
+      "roles": {
+        "all": {
+          "Group1": {
+            "equals": [
+              "role-1",
+              "role-4"
+            ]
+          },
+          "Group2": {
+            "equals": [
+              "role-2",
+              "role-4"
+            ]
+          },
+          "Group3": {
+            "equals": [
+              "role-5",
+              "role-4"
+            ]
+          }
+        }
+      }
+    },
+    "rule8": {
+      "paths": [
+        "test.path",
+        "test.path.8"
+      ],
+      "roles": {
+        "any": {
+          "Group1": {
+            "equals": [
+              "role-1",
+              "role-6"
+            ]
+          },
+          "Group2": {
+            "equals": [
+              "role-4",
+              "role-5"
+            ]
+          },
+          "Group3": {
+            "equals": [
+              "role-9",
+              "role-3"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

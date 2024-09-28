@@ -1,0 +1,101 @@
+{
+  "allow_rules": {
+    "rule1": {
+      "paths": [
+        "test.path"
+      ],
+      "roles": {
+        "all": {
+          "Group1": {
+            "equals": [
+              "role-1",
+              "role-2"
+            ]
+          }
+        },
+        "any": {
+          "Group1": {
+            "equals": [
+              "role-4",
+              "role-2"
+            ]
+          },
+          "Group2": {
+            "equals": [
+              "role-1",
+              "role-2"
+            ]
+          }
+        }
+      },
+      "headers": {
+        "all": {
+          "roles": {
+            "equals": [
+              "role-2",
+              "role-1"
+            ]
+          }
+        }
+      }
+    },
+    "rule2": {
+      "paths": [
+        "test.path"
+      ],
+      "roles": {
+        "any": {
+          "Group1": {
+            "startsWith": [
+              "role-"
+            ]
+          },
+          "Group2": {
+            "equals": [
+              "role-4",
+              "role-5"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "deny_rules": {
+    "rule1": {
+      "paths": [
+        "test.path"
+      ],
+      "roles": {
+        "all": {
+          "Group1": {
+            "equals": [
+              "role-1",
+              "role-4"
+            ]
+          }
+        }
+      }
+    },
+    "rule2": {
+      "paths": [
+        "test.path"
+      ],
+      "roles": {
+        "any": {
+          "Group1": {
+            "equals": [
+              "role-1",
+              "role-6"
+            ]
+          },
+          "Group2": {
+            "equals": [
+              "role-4",
+              "role-5"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

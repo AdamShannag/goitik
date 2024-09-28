@@ -1,0 +1,37 @@
+# Go binary
+/bin/
+/obj/
+
+# Build artifacts
+*.exe
+*.exe~
+*.out
+*.test
+*.prof
+*.cgo1.go
+
+# Vendor directory
+/vendor/
+
+# IDE specific files
+.idea/
+*.iml
+
+# GoLand
+/.idea/
+/*.iml
+
+# Temporary files
+*.log
+*.tmp
+*.temp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+/vcs.xml
+/workspace.xml
+/modules.xml

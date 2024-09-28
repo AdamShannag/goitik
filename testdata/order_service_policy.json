@@ -1,0 +1,98 @@
+{
+  "allow_rules": {
+    "view-order-rule": {
+      "paths": [
+        "/api.v1.*.GetOrder",
+        "/api.*.*.ListOrders"
+      ],
+      "roles": {
+        "any": {
+          "view-order-group": {
+            "equals": [
+              "View Orders"
+            ]
+          },
+          "admin-group": {
+            "equals": [
+              "Admin"
+            ]
+          }
+        }
+      }
+    },
+    "create-order-rule": {
+      "paths": [
+        "/api.v1.order.CreateOrder"
+      ],
+      "roles": {
+        "all": {
+          "create-order-group": {
+            "equals": [
+              "Create Order"
+            ]
+          }
+        }
+      }
+    },
+    "update-order-rule": {
+      "paths": [
+        "/api.v1.order.UpdateOrder"
+      ],
+      "roles": {
+        "all": {
+          "update-order-group": {
+            "equals": [
+              "Update Order"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "deny_rules": {
+    "view-order-rule": {
+      "paths": [
+        "/api.v1.order.GetOrder",
+        "/api.v1.order.ListOrders",
+        "/api.v1.order.CreateOrder"
+      ],
+      "roles": {
+        "all": {
+          "not-allowed-to-get-and-list": {
+            "endsWith": [
+              "-Manager"
+            ]
+          },
+          "not-allowed-to-create": {
+            "equals": [
+              "Accountant"
+            ]
+          }
+        }
+      },
+      "headers": {
+        "all": {
+          "username": {
+            "startsWith": [
+              "dan"
+            ]
+          }
+        }
+      }
+    },
+    "update-order-rule": {
+      "paths": [
+        "/api.v1.order.UpdateOrder"
+      ],
+      "roles": {
+        "all": {
+          "not-allowed-to-update": {
+            "equals": [
+              "Manager"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
